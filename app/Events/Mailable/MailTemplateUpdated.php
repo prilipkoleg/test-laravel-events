@@ -4,7 +4,7 @@ namespace App\Events\Mailable;
 
 use App\User;
 use App\MailTemplate;
-use App\Traits\Mailable;
+use App\Traits\MailContent;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 class MailTemplateUpdated
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels, Mailable;
+    use Dispatchable, InteractsWithSockets, SerializesModels, MailContent;
 
     public $user;
     public $template;

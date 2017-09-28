@@ -4,7 +4,7 @@ namespace App\Traits;
 
 use App\MailTemplate;
 
-trait Mailable
+trait MailContent
 {
     public $mailContent;
 

@@ -3,7 +3,7 @@
 namespace App\Events\Mailable;
 
 use App\User;
-use App\Traits\Mailable;
+use App\Traits\MailContent;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -14,7 +14,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
 class UserRegistered
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels, Mailable;
+    use Dispatchable, InteractsWithSockets, SerializesModels, MailContent;
 
     public $user;
 
