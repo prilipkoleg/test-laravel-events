@@ -2,7 +2,7 @@
 
 namespace App\Listeners\EventListener\Mailable;
 
-use App\User;
+use App\Models\User;
 use App\Events\Mailable\MailTemplateUpdated;
 use App\Mail\MailTemplateUpdated as UpdatedMail;
 use Illuminate\Queue\InteractsWithQueue;
@@ -31,6 +31,8 @@ class MailTemplateUpdateNotification
     {
         $users = User::all()->except($event->user->id);
 
-        Mail::to($users)->send(new UpdatedMail($event));
+        if($users){
+            Mail::to($users)->send(new UpdatedMail($event));
+        }
     }
 }

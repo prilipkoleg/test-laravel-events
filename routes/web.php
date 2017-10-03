@@ -33,7 +33,7 @@ Route::prefix('mail-template')->middleware('auth')->group(function(){
         'as'   => 'mail-template.item'
     ]);
     Route::put('/{id}',[
-        'uses' => 'MailTemplateController@putEditTemplate',
+        'uses' => 'MailTemplateController@putTemplate',
         'as'   => 'mail-template.edit'
     ]);
 });

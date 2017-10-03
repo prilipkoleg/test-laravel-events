@@ -2,7 +2,7 @@
 
 namespace App\Events\Mailable;
 
-use App\User;
+use App\Models\User;
 use App\Traits\MailContent;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;

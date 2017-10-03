@@ -4,7 +4,7 @@ namespace App\Listeners\EventListener\Mailable;
 
 use App\Events\Mailable\UserRegistered;
 use App\Mail\UserRegistered as WelcomeMail;
-use App\MailTemplate;
+use App\Models\MailTemplate;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Mail;

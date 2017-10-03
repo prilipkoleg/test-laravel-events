@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\MailTemplate;
+use App\Models\MailTemplate;
 use App\Events\Mailable\MailTemplateUpdated;
 use Illuminate\Http\Request;
 
@@ -32,7 +32,7 @@ class MailTemplateController extends Controller
         ]);
     }
 
-    public function putEditTemplate( $id, Request $request )
+    public function putTemplate( $id, Request $request )
     {
         $this->validate($request, [
             'content' => 'required|min:100'

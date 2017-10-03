@@ -2,14 +2,14 @@
 
 namespace App\Traits;
 
-use App\MailTemplate;
+use App\Models\MailTemplate;
 
 trait MailContent
 {
     public $mailContent;
 
     /**
-     * Get MailTemplateName
+     * Set MailTemplateContent
      *
      * @return string
      */

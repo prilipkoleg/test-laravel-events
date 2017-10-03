@@ -1,6 +1,6 @@
 <?php
 
-use App\MailTemplate;
+use App\Models\MailTemplate;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 

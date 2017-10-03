@@ -2,8 +2,8 @@
 
 namespace App\Events\Mailable;
 
-use App\User;
-use App\MailTemplate;
+use App\Models\User;
+use App\Models\MailTemplate;
 use App\Traits\MailContent;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
@@ -31,7 +31,7 @@ class MailTemplateUpdated
         $this->user = Auth::user();
         $this->template = $template;
 
-        // Mailable Trait
+        // Trait
         $this->setMailContent();
     }
 
